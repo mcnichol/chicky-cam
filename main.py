@@ -15,6 +15,8 @@ import socket
 
 
 app = Flask(__name__)
+host = socket.gethostbyname(socket.gethostname())
+port = 5000
 
 @app.route('/')
 def index():
