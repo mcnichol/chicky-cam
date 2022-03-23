@@ -35,7 +35,7 @@ def video_feed():
 
 def is_port_open(port):
     try:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM as s:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.bind((host, port))
             s.close()
     except socket.error as e:
@@ -48,7 +48,7 @@ def is_port_open(port):
 if __name__ == '__main__':
     if is_port_open(port):
         pi_camera = VideoCamera(flip=False) 
-        app.run(host=host, port=port debug=False)
+        app.run(host=host, port=port, debug=False)
     else:
         print("Server not started.")
     
