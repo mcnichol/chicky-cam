@@ -1,10 +1,14 @@
 [Unit]
 Description=Run Chicken Camera Streaming Server
+Wants=network-online.target
+After=network.target network-online.target
 
 [Service]
+Type=exec
 WorkingDirectory=/home/pi/
 User=pi
-ExecStart=/home/pi/workspace/pi-camera-stream-flask/main.py
+ExecStart=/home/pi/workspace/chicky-cam/main.py
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
