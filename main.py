@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 #Modified by mcnichol
-#Date: 22.03.23
 #Desc: Web app streaming RPI camera
 # main.py
 
